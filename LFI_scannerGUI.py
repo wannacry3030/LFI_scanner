@@ -29,7 +29,7 @@ root.geometry("500x200")
 root.title("LFI Scanner")
 
 # criando o input
-url_label = tk.Label(root, text="URL:")
+url_label = tk.Label(root, text="URL:", bg='#000000', fg='#5bff45')
 url_label.grid(row=0, column=0, sticky="W")
 
 # criando a entrada de texto
@@ -37,8 +37,8 @@ entry = tk.Entry(root)
 entry.grid(row=0, column=1)
 
 # criando um botão pra começar o scan
-myFont = font.Font(family='Helvetica', weight='bold')
-scan_button = tk.Button(root, text="SCAN", command=run_scan, font=myFont, bg='#000000', fg='#5bff45')
+myFont = font.Font(family='Courier', weight='bold')
+scan_button = tk.Button(root, text="SCAN", command=run_scan, font=myFont, bg='#000000', fg='#5bff45', activebackground='#787878')
 scan_button.grid(row=1, column=0, columnspan=2, pady=10)
 
 # criando um rotulo que mostra o resultado
