@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 import tkinter.font as font
 import requests
 
@@ -38,8 +39,14 @@ entry.grid(row=0, column=1)
 
 # criando um botão pra começar o scan
 myFont = font.Font(family='Courier', weight='bold')
-scan_button = tk.Button(root, text="SCAN", command=run_scan, font=myFont, bg='#000000', fg='#5bff45', activebackground='#787878')
+scan_button = tk.Button(root, text="Scannear", command=run_scan, font=myFont, bg='#000000', fg='#5bff45', activebackground='#787878')
 scan_button.grid(row=1, column=0, columnspan=2, pady=10)
+
+#barra de progresso
+pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
+
+# botao de resetar o scanner
+stop_button = tk.Button(root, text='Resetar',)
 
 # criando um rotulo que mostra o resultado
 result_label = tk.Label(root, text="",)
