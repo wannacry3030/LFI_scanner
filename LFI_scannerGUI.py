@@ -35,11 +35,11 @@ url_label.grid(row=0, column=0, sticky="W", padx=10,pady=10)
 
 # criando a entrada de texto
 entry = tk.Entry(root)
-entry.grid(row=1, column=1, padx=10,pady=10)
+entry.grid(row=1, column=0, padx=10,pady=10)
 
 #barra de progresso
 pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
-pb.grid(column=1,row=0,columnspan=2, padx=10,pady=10)
+pb.grid(column=0,row=2,columnspan=2, padx=10,pady=10)
 
 # criando um botão pra começar o scan
 myFont = font.Font(family='Courier', weight='bold')
