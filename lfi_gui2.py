@@ -4,8 +4,9 @@ import tkinter.font as font
 import requests
 
 def run_scan():
+    result_label.config(text="")
     pb.start(100)
-    root.update()
+    update_progress_bar()
     # usuario informa a URL
     url = entry.get()
     
@@ -16,7 +17,6 @@ def run_scan():
     for file in files:
         # construindo a URL completa
         test_url = url + "?page=" + file
-        update_progress_bar()
         # fazendo o request na URL
         response = requests.get(test_url)
         # checando o codigo de resposta do request
