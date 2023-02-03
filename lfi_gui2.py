@@ -41,7 +41,7 @@ def update_progress_bar():
 
 # criando a janela GUI
 root = tk.Tk()
-root.geometry("900x400")
+root.geometry("700x400")
 root.title("LFI Scanner")
 root['bg'] = 'black'
 
