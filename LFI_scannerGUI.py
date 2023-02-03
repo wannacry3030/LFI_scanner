@@ -29,30 +29,35 @@ root = tk.Tk()
 root.geometry("900x400")
 root.title("LFI Scanner")
 root['bg'] = 'black'
+
 # criando o input
 url_label = tk.Label(root, text="URL:", bg='#000000', fg='#5bff45')
-url_label.grid(row=0, column=0, sticky="W", padx=10,pady=10)
+url_label.pack(pady=10)
+#url_label.grid(row=0, column=0, sticky="W", padx=10,pady=10)
 
 # criando a entrada de texto
 entry = tk.Entry(root)
-entry.grid(row=1, column=0, padx=10,pady=10)
+entry.pack(pady=10)
+#entry.grid(row=0, column=1, columnspan=2, padx=10, pady=10, sticky="E")
 
 #barra de progresso
 pb = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=280)
-pb.grid(column=0,row=2,columnspan=2, padx=10,pady=10)
+pb.pack(pady=10)
+#pb.grid(column=0,row=1,columnspan=2, padx=10,pady=10)
 
 # criando um botão pra começar o scan
 myFont = font.Font(family='Courier', weight='bold')
 scan_button = tk.Button(root, text="Scannear", command=run_scan, font=myFont, bg='#000000', fg='#5bff45', activebackground='#787878')
-scan_button.grid(row=2, column=0, columnspan=2, padx=10,pady=10)
+scan_button.pack(pady=10)
+#scan_button.grid(row=2, column=1, columnspan=2, padx=10, pady=10, sticky="E")
 
 # botao de resetar o scanner
-stop_button = tk.Button(root, text='Resetar',)
-stop_button.grid(row=3, column=0,  columnspan=2, padx=10,pady=10)
+stop_button = tk.Button(root, text='Resetar', command=run_scan, font=myFont, bg='#000000', fg='#5bff45', activebackground='#787878')
+#stop_button.grid(row=2, column=2, columnspan=2, padx=10, pady=10, sticky="E")
 
 # criando um rotulo que mostra o resultado
 result_label = tk.Label(root, text="",)
-result_label.grid(row=4, column=0, columnspan=2, padx=10,pady=10)
+#result_label.grid(row=4, column=0, columnspan=2, padx=10,pady=10)
 
 # startando a GUI
 root.mainloop()
