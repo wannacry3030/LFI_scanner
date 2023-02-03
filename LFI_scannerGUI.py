@@ -25,9 +25,9 @@ def run_scan():
 
 # criando a janela GUI
 root = tk.Tk()
-root.geometry("500x200")
+root.geometry("650x200")
 root.title("LFI Scanner")
-
+root['bg'] = 'black'
 # criando o input
 url_label = tk.Label(root, text="URL:", bg='#000000', fg='#5bff45')
 url_label.grid(row=0, column=0, sticky="W")
