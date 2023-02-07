@@ -25,7 +25,7 @@ def run_scan():
             result_label.config(text=result_label.cget("text") + f"[+] VULNERÁVEL: {test_url}\n")
         else:
             # se o status nao for 200, o codigo não é acessavel
-            result_label.config(text=f"[-] Não VULNERÁVEL: {test_url}")
+            result_label.config(text=f"[-] Não VULNERÁVEL: {test_url}\n")
     pb.stop()
             
 def reset_scan():
